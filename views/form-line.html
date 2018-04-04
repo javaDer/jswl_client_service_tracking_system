@@ -196,17 +196,18 @@
                                 <label for="user-name" class="am-u-sm-3 am-form-label">客户姓名 <span
                                         class="tpl-form-line-small-title">user_name</span></label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" class="tpl-form-input" name="user-name" id="user-name" placeholder="请输入客户姓名">
+                                    <input type="text" class="tpl-form-input" name="user_name" id="user-name"
+                                           placeholder="请输入客户姓名">
                                 </div>
                             </div>
                             <div class="am-form-group">
                                 <label for="user-sex" class="am-u-sm-3 am-form-label">性别 <span
-                                      name="user-sex"  class="tpl-form-line-small-title">user-sex</span></label>
+                                         class="tpl-form-line-small-title">user-sex</span></label>
                                 <div class="am-u-sm-9">
-                                    <select data-am-selected="{searchBox: 1}">
+                                    <select id="user-sex" name="user_sex" data-am-selected="{searchBox: 0}">
                                         <option value="1">男</option>
                                         <option value="2">女</option>
-                                        <option value="3">未知</option>
+                                        <option value="0">未知</option>
                                     </select>
                                 </div>
                             </div>
@@ -214,31 +215,29 @@
                                 <label for="user-name" class="am-u-sm-3 am-form-label">客户年龄 <span
                                         class="tpl-form-line-small-title">user_name</span></label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" class="tpl-form-input" id="user_age" placeholder="请输入客户年龄">
-                                    <small>请填写客户年龄。</small>
+                                    <input type="number" class="tpl-form-input"  name="user_age" placeholder="请输入客户年龄">
                                 </div>
                             </div>
                             <div class="am-form-group">
                                 <label for="user-name" class="am-u-sm-3 am-form-label">客户联系方式 <span
                                         class="tpl-form-line-small-title">user_telphone</span></label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" class="tpl-form-input" id="user_telphone"
+                                    <input type="text" class="tpl-form-input" name="user_telphone"
                                            placeholder="请输入客户联系方式 ">
-                                    <small>请填写客户联系方式。</small>
                                 </div>
                             </div>
                             <div class="am-form-group">
-                                <label for="user-phone" class="am-u-sm-3 am-form-label">经营地址 <span
+                                <label for="user_business_address" class="am-u-sm-3 am-form-label">经营地址 <span
                                         class="tpl-form-line-small-title">user_business_address</span></label>
                                 <div class="am-u-sm-9">
-                                    <select data-am-selected="{searchBox: 1}">
+                                    <select name="user_business_address" data-am-selected="{searchBox: 0}">
                                         <option value="1">南二环</option>
                                         <option value="2">民武路</option>
                                         <option value="3">金武路</option>
                                         <option value="4">南关中路</option>
                                         <option value="5">沿河路</option>
                                         <option value="6">新建路</option>
-                                        <option value="7">其它</option>
+                                        <option value="0">其它</option>
                                     </select>
                                 </div>
                             </div>
@@ -246,22 +245,21 @@
                                 <label for="user-name" class="am-u-sm-3 am-form-label">经营场所名称 <span
                                         class="tpl-form-line-small-title">user_operation</span></label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" class="tpl-form-input" id="user_operation"
+                                    <input type="text" class="tpl-form-input" name="user_operation"
                                            placeholder="请输入客户经营场所名称 ">
-                                    <small>请输入客户经营场所名称。</small>
                                 </div>
                             </div>
                             <div class="am-form-group">
                                 <label for="user_scope_of_business" class="am-u-sm-3 am-form-label">经营范围 <span
                                         class="tpl-form-line-small-title">user_scope_of_business</span></label>
                                 <div class="am-u-sm-9">
-                                    <select data-am-selected="{searchBox: 1}">
+                                    <select  name="user_scope_of_business" data-am-selected="{searchBox: 0}">
                                         <option value="1">小车修理</option>
                                         <option value="2">大车修理</option>
                                         <option value="3">汽车销售</option>
                                         <option value="4">汽车美容</option>
                                         <option value="5">特种车辆维修</option>
-                                        <option value="6">未知</option>
+                                        <option value="0">未知</option>
                                     </select>
                                 </div>
                             </div>
@@ -269,10 +267,10 @@
                                 <label for="user_is_intention" class="am-u-sm-3 am-form-label">是否有意向 <span
                                         class="tpl-form-line-small-title">user_is_intention</span></label>
                                 <div class="am-u-sm-9">
-                                    <select data-am-selected="{searchBox: 3}">
+                                    <select data-am-selected="{searchBox: 0}" name="user_is_intention">
                                         <option value="1">是</option>
                                         <option value="2">否</option>
-                                        <option value="3">未知</option>
+                                        <option value="0">未知</option>
                                     </select>
                                 </div>
                             </div>
@@ -280,10 +278,10 @@
                                 <label for="user_lease_use" class="am-u-sm-3 am-form-label">租赁用途 <span
                                         class="tpl-form-line-small-title">user_lease_use</span></label>
                                 <div class="am-u-sm-9">
-                                    <select data-am-selected="{searchBox: 3}">
+                                    <select data-am-selected="{searchBox: 0}" name="user_lease_use">
                                         <option value="1">自营</option>
                                         <option value="2">合营</option>
-                                        <option value="3">未知</option>
+                                        <option value="0">未知</option>
                                     </select>
                                 </div>
                             </div>
@@ -291,7 +289,7 @@
                                 <label for="user_move_date" class="am-u-sm-3 am-form-label">搬迁日期 <span
                                         class="tpl-form-line-small-title">user_move_date</span></label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" class="am-form-field tpl-form-no-bg" placeholder="搬迁日期"
+                                    <input type="text" name="user_move_date" class="am-form-field tpl-form-no-bg" placeholder="搬迁日期"
                                            data-am-datepicker="" readonly/>
                                 </div>
                             </div>
@@ -299,11 +297,10 @@
                                 <label for="user_whether_children" class="am-u-sm-3 am-form-label">是否有上学子女 <span
                                         class="tpl-form-line-small-title">user_whether_children</span></label>
                                 <div class="am-u-sm-9">
-                                    <select data-am-selected="{searchBox: 2}">
+                                    <select data-am-selected="{searchBox: 0}" name="user_whether_children">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
-                                        <option value="4">4</option>
                                         <option value="4">4</option>
                                         <option value="0">未知</option>
                                     </select>
@@ -313,11 +310,11 @@
                                 <label for="user_children_level" class="am-u-sm-3 am-form-label">子女上学程度<span
                                         class="tpl-form-line-small-title">user_children_level</span></label>
                                 <div class="am-u-sm-9">
-                                    <select data-am-selected="{searchBox: 2}">
+                                    <select data-am-selected="{searchBox: 0}" name="user_children_level">
                                         <option value="1">幼儿园</option>
                                         <option value="2">小学</option>
                                         <option value="3">中学</option>
-                                        <option value="4">未知</option>
+                                        <option value="0">未知</option>
                                     </select>
                                 </div>
                             </div>
@@ -325,16 +322,15 @@
                                 <label for="user_children_now_school" class="am-u-sm-3 am-form-label">子女就读学校 <span
                                         class="tpl-form-line-small-title">user_children_now_school</span></label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" class="tpl-form-input" id="user_children_now_school"
+                                    <input type="text" class="tpl-form-input" name="user_children_now_school"
                                            placeholder="请输入客户经营场所名称 ">
-                                    <small>子女就读学校</small>
                                 </div>
                             </div>
                             <div class="am-form-group">
                                 <label for="user_children_way" class="am-u-sm-3 am-form-label">子女接送方式<span
                                         class="tpl-form-line-small-title">user_children_way</span></label>
                                 <div class="am-u-sm-9">
-                                    <select data-am-selected="{searchBox: 2}">
+                                    <select data-am-selected="{searchBox: 0}" name="user_children_way">
                                         <option value="1">接送</option>
                                         <option value="2">自回</option>
                                         <option value="0">未知</option>
@@ -345,7 +341,7 @@
                                 <label for="user_is_stay" class="am-u-sm-3 am-form-label">入住后是否住宿<span
                                         class="tpl-form-line-small-title">user_is_stay</span></label>
                                 <div class="am-u-sm-9">
-                                    <select data-am-selected="{searchBox: 2}">
+                                    <select data-am-selected="{searchBox: 0}" name="user_is_stay">
                                         <option value="1">是</option>
                                         <option value="2">否</option>
                                         <option value="3">不确定</option>
@@ -357,7 +353,7 @@
                                 <label for="user_source" class="am-u-sm-3 am-form-label">来源<span
                                         class="tpl-form-line-small-title">user_source</span></label>
                                 <div class="am-u-sm-9">
-                                    <select data-am-selected="{searchBox: 2}">
+                                    <select data-am-selected="{searchBox: 0}" name="user_source">
                                         <option value="1">朋友介绍</option>
                                         <option value="2">媒体广告</option>
                                         <option value="0">未知</option>
@@ -367,7 +363,7 @@
                             <div class="am-form-group">
                                 <label for="user_remake" class="am-u-sm-3 am-form-label">意见</label>
                                 <div class="am-u-sm-9">
-                                    <textarea class="" rows="10" id="user_remake" placeholder="请输入意见"></textarea>
+                                    <textarea class="" rows="10" name="user_remake" placeholder="请输入意见"></textarea>
                                 </div>
                             </div>
 

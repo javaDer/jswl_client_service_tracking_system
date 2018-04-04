@@ -3,20 +3,32 @@ const app = new Koa()
 const views = require('koa-views')
 const json = require('koa-json')
 const onerror = require('koa-onerror')
-// const bodyparser = require('koa-bodyparser')
+const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
-const koaBetterBody = require('koa-better-body')
-
+const config = require('./config/config')
 const index = require('./routes/index')
 const users = require('./routes/users')
-
+const session = require('koa-session-minimal');
+const MysqlStore = require('koa-mysql-session');
 // error handler
 onerror(app)
+// session存储配置
+const sessionMysqlConfig = {
+    user: config.database.USERNAME,
+    password: config.database.PASSWORD,
+    database: config.database.DATABASE,
+    host: config.database.HOST,
+}
 
+// 配置session中间件
+app.use(session({
+    key: 'USER_SID',
+    store: new MysqlStore(sessionMysqlConfig)
+}))
 // middlewares
-// app.use(bodyparser({
-//     enableTypes: ['json', 'form', 'text']
-// }))
+app.use(bodyparser({
+    enableTypes: ['json', 'form', 'text']
+}))
 app.use(json())
 app.use(logger())
 app.use(require('koa-static')(__dirname + '/public'))
